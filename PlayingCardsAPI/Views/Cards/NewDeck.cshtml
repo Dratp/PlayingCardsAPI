@@ -1,0 +1,18 @@
+﻿@model Deck
+@{
+    ViewData["Title"] = "NewDeck";
+}
+
+<h1>NewDeck</h1>
+
+<p>A new deck has been created</p>
+<ul>
+    <li>Shuffled: @Model.shuffled</li>
+    <li>Remaining Cards: @Model.remaining</li>
+</ul>
+<form method="post" action="GetHand">
+    <input type="hidden" id="deckid" name="deckid" value="@Model.deck_id"/>
+    <input type="submit" class="btn-info" value="Get Hand" />
+</form>
+
+
