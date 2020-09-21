@@ -12,6 +12,12 @@ namespace PlayingCardsAPI.Controllers
     {
         public IActionResult Index()
         {
+            string id = HttpContext.Request.Cookies["deckid"];
+            if(id == null)
+            {
+                return RedirectToAction("NewDeck");
+            }
+            
             return View();
         }
 
@@ -21,6 +27,7 @@ namespace PlayingCardsAPI.Controllers
             client.BaseAddress = new Uri("https://deckofcardsapi.com");
             var response = await client.GetAsync($"/api/deck/new/shuffle/?deck_count=1");
             Deck playingDeck = await response.Content.ReadAsAsync<Deck>();
+            HttpContext.Response.Cookies.Append("deckid", playingDeck.deck_id);
             return View(playingDeck);
         }
 
@@ -31,7 +38,6 @@ namespace PlayingCardsAPI.Controllers
             var response = await client.GetAsync($"/api/deck/{deckid}/draw/?count=6");
             Deck playingDeck = await response.Content.ReadAsAsync<Deck>();
             return View(playingDeck);
-
         }
 
 

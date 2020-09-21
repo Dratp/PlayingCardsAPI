@@ -112,3 +112,4 @@ C:\DevBuild4\WebApps\PlayingCardsAPI\PlayingCardsAPI\obj\Debug\netcoreapp3.1\Pla
 C:\DevBuild4\WebApps\PlayingCardsAPI\PlayingCardsAPI\obj\Debug\netcoreapp3.1\PlayingCardsAPI.genruntimeconfig.cache
 C:\DevBuild4\WebApps\PlayingCardsAPI\PlayingCardsAPI\obj\Debug\netcoreapp3.1\Razor\Views\Cards\NewDeck.cshtml.g.cs
 C:\DevBuild4\WebApps\PlayingCardsAPI\PlayingCardsAPI\obj\Debug\netcoreapp3.1\Razor\Views\Cards\GetHand.cshtml.g.cs
+C:\DevBuild4\WebApps\PlayingCardsAPI\PlayingCardsAPI\obj\Debug\netcoreapp3.1\Razor\Views\Cards\Index.cshtml.g.cs
